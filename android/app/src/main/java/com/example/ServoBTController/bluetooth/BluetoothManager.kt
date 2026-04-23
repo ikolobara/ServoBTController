@@ -62,7 +62,7 @@ class BluetoothManager {
 
     fun sendData(data: String): Boolean =
         try {
-            output?.write("$data\n".toByteArray())
+            output?.write("A:$data\n".toByteArray())
             output?.flush()
             true
         } catch (e: Exception) {
